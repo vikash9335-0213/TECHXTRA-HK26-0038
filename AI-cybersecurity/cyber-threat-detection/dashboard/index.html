@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Threat Detection</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🛡️ CyberShield</h1>
+    <p>AI-Based Cyber Threat Detection Dashboard</p>
+  </header>
+
+  <main>
+    <section class="stats">
+      <div class="card">
+        <h3>Total Events</h3>
+        <p id="total">128</p>
+      </div>
+      <div class="card">
+        <h3>Threats Detected</h3>
+        <p id="threats">18</p>
+      </div>
+      <div class="card">
+        <h3>High Risk</h3>
+        <p id="high">5</p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Threat Detection Simulator</h2>
+      <p>Demo event को check करने के लिए नीचे क्लिक करो।</p>
+
+      <input id="eventInput"
+        placeholder="Enter event, e.g. failed login">
+
+      <button onclick="detectThreat()">Analyze Event</button>
+      <button onclick="addEvent()">Simulate Event</button>
+
+      <h3>Analysis Result</h3>
+      <p id="result">Waiting for an event...</p>
+    </section>
+
+    <section class="panel">
+      <h2>Security Event History</h2>
+      <input id="search"
+        placeholder="Search events..."
+        oninput="searchEvents()">
+
+      <ul id="eventList">
+        <li>Repeated Failed Logins — High</li>
+        <li>Unusual Traffic Spike — Medium</li>
+        <li>New Device Login — Low</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
